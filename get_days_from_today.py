@@ -3,9 +3,9 @@ import datetime
 
 def get_days_from_today(date): #data format: "yyyy-mm-dd"
     try:
-        now=datetime.datetime.now()
+        now=datetime.date.today()
         try:
-            date_parameter=datetime.datetime.strptime(date, "%Y-%m-%d")
+            date_parameter=datetime.date.fromisoformat(date)#, "%Y-%m-%d")
         except:
             print("Date format error in get_days_from_today(date)")
             return None
